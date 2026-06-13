@@ -1,2 +1,2 @@
-# multimedia
-Repositorio Multimedia de Ripley
+# repositorio-multimedia
+Repositorio Multimedia de Ellen Ripley

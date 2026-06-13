@@ -1,0 +1,405 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  display:flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: black;
+  overflow-x: hidden; 
+  width: 100%;
+}
+
+* {
+box-sizing: border-box;
+font-family: "DM Sans", sans-serif;
+}
+
+
+
+/*-------------------------CAJAS, BORDES Y MARGENES----------------------*/
+
+.contenedorPrincipal {
+
+max-width: 1080px;
+padding: 2em;
+padding-top: 1em;
+background-color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+box-shadow: 0 0 25px 25px #ffffff;
+
+
+}
+
+.cajaMuestra section {
+
+max-width: min-content;
+padding: 1em;
+margin: 1em;
+border: 3px solid black;
+border-color: black;
+border-radius: 2em;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+}
+
+.cajaMuestra {
+
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+}
+
+.paginaCanvas section, #futuraBocetos section {
+
+padding: 1em;
+margin: 1em;
+border: 3px solid black;
+border-color: black;
+border-radius: 2em;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+.paginaFutura, .paginaFutura section {
+
+padding: 0;
+margin: 1em;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+.paginaCanvas section:nth-child(3), .paginaCanvas section:last-child, #futuraBocetos section:last-child {
+
+border: none;
+
+}
+
+main {
+
+margin-top: 2em;
+margin-bottom: 2em;
+
+}
+
+header {
+
+align-self: flex-start;
+}
+
+footer {
+display: flex;
+flex-direction: column;
+align-items: center;
+border-top: dotted #000000;
+
+
+}
+
+
+.paginaCanvas section ul  { 
+
+align-self: flex-start;
+
+}
+
+
+
+/*-------------------------IMAGENES Y CANVAS----------------------*/
+
+canvas {
+  display: block;
+  border-radius: 2em;
+  box-shadow: 0 0 25px 0px #000000;
+
+}
+
+#canvasDiv {
+  display: flex;
+  justify-content: center;
+}
+
+
+.cajaMuestra img {
+
+width: 350px;
+height: 350px;
+border-radius: 2em;
+box-shadow: 0 0 5px 0px #000000;
+
+
+}
+
+img.futuraCaja {
+
+width: 350px;
+height: auto;
+
+}
+
+/*-------------------------TEXTO EN GENERAL Y DISPOSICIONES----------------------*/
+
+h2 {
+
+margin-top: 1.5em;
+
+}
+
+h3 {
+
+margin-left: 1em;
+margin-bottom: 2em;
+
+}
+
+.paginaCanvas section p:first-of-type, .paginaCanvas section ul,
+#futuraBocetos section p:first-of-type
+
+{
+
+margin-top: 0.2em;
+
+}
+
+
+.cajaMuestra h3 {
+
+margin-left: 0;
+
+}
+
+.paginaCanvas section h4, #futuraBocetos section h4 {
+
+align-self: flex-start;
+margin-bottom: 0.5em;
+margin-top: 0.2em;
+
+
+}
+
+
+p {
+
+
+margin-top: 1em;
+margin-bottom: 0;
+
+}
+
+.cajaMuestra p {
+
+
+margin-top: 1em;
+margin-left: 1.5em;
+
+}
+
+#futura3 {
+
+align-self: flex-start;
+align-items: flex-start;
+border: 3px solid black;
+border-color: black;
+border-radius: 2em;
+padding: 1em;
+margin-top: 0;
+
+}
+
+#futura3 h4 {
+
+margin-top: 0;
+margin-bottom: 0;
+}
+
+ #futura3 p {
+
+margin-top: 0.5em;
+
+ }
+
+header h2 {
+
+font-style: italic;
+font-weight: 400;
+
+}
+
+header h1 {
+
+padding-bottom: 0.5em;
+border-bottom: solid #000000;
+
+}
+
+h3.titulosObras {
+
+font-weight: bold;
+font-size: x-large;
+margin-bottom: 1em;
+
+}
+
+/*----------------------BOTONES--------------------*/
+
+
+h3 a {
+
+color: #000000;
+padding: 1em;
+border-radius: 2em;
+text-decoration: none;
+font-weight: 600;
+
+}
+
+h3 a#anastrofe {
+
+font-size:large;
+
+}
+
+h3 a:link {background-color: rgb(223, 219, 215);
+          border: 3px solid rgb(63, 62, 62);}
+
+h3 a:visited {background-color: rgb(223, 219, 215);
+          border: 3px solid rgb(63, 62, 62);}
+
+h3 a:hover {background-color: rgb(249, 179, 226);
+          border: 3px solid rgb(124, 110, 121);}
+
+
+/*_______________MEDIA QUERIES_______________________*/
+
+@media (max-width: 480px) {
+
+
+
+.contenedorPrincipal {
+
+width: 100vw; /* Asegura que ocupe el ancho de la ventana */
+
+max-width: 100%;
+padding: 0 0.5em;
+margin: 0;
+box-shadow: none;
+
+overflow-x: hidden; /* Corta cualquier cosa que sobresalga */
+
+
+}
+
+.paginaCanvas, .paginaFutura {
+    width: 100%;
+    max-width: 100vw; /* Evita que el contenedor sea más ancho que la ventana */
+    overflow-x: hidden; /* Corta cualquier excedente visualmente */
+    display: flex;
+    flex-direction: column;
+}
+
+.paginaCanvas section, #futuraBocetos section, .paginaFutura section#futura3 {
+
+
+width: 100%;
+margin-left: 0;
+margin-right: 0;
+border-left: none;
+border-right: none;
+border-radius: 0;
+
+
+}
+
+.paginaCanvas section:first-of-type {
+
+margin-top: 0;
+
+}
+
+
+
+canvas {
+
+max-width: 280px;
+
+
+}
+
+section#vision canvas {
+
+max-width: 256px !important;
+max-height: 256px !important;
+
+}
+
+section#futura3canvas canvas, section#nuestraCanvas canvas {
+
+max-height: 515px;
+
+}
+
+
+
+img {
+
+max-width: 280px;
+max-height: 280px;
+
+}
+
+img.futuraCaja  {
+
+max-height: 512px;
+
+}
+
+header {
+
+margin-right: 1em;
+margin-left: 1em;
+
+}
+
+footer {
+
+margin-right: 1em;
+margin-left: 1em;
+margin-bottom: 2em;
+
+}
+
+
+.paginaFutura section h3 a, .paginaFutura section h3, .botonRetorno {
+
+font-size: small;
+margin-left: 0;
+
+}
+
+
+h1, h2, h3, p, a, ul, li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+
+.titulosObras {
+
+margin: 0 1em;
+
+
+}
+
+}
